@@ -1,0 +1,55 @@
+variable
+=========================================
+
+Untuk tipe data yang digunakan untuk menyimpan variable bisa menggunakan 'var'
+karena JS itu dynamic maka var akan menyimpan semua tipe data yang ada
+
+ada kata kunci baru untuk membuat variable, yaitu 'let' dan 'const'
+dan kata kunci var sudah tidak dianjurkan
+skrg var diganti dengan let
+
+const itu digunakan untuk menyimpan data yang tidak bisa diubah lagi isinya, sama aja kayak kostanta
+
+Operator Perbandingan
+=========================================
+
+== : membandingkan isinya tidak peduli tipe datanya
+=== : membandingkan isinya dan tipe datanya harus sama
+!= : membandingkan isinya
+!== : membandingkan isinya atau tipe datanya
+
+Console
+=========================================
+
+Console ini digunakan sebagai log di JS
+console ini bisa digunakan ketika ingin melakukan debugging
+Ada 4 level dari logging :
+- console.info() == console.log() : memberikan informasi
+- console.warn() : memberi peringatan
+- console.error() : memberi error
+- console.table() : memberi info dalam bentuk table
+
+String Template
+=========================================
+
+Untuk menggunakan fitur ini haru menggunaan backtick (``)
+Ini kayak format di python, nanti tanda tertentu akan direplace menggunakan variable atau value tertentu
+Dalam string template juga bisa melakukan expression perbandingan
+
+bisa juga dibuat multi line kayak """ """ di java
+
+Konversi Strin dan Number
+=========================================
+
+- parseInt(string) : string ke bilangan bulat
+- parseFloat(string) : string ke desimal
+- Number(string) : string ke bulat atau pecahan
+- number.toString() : number ke string
+
+NaN adalah tipe data unik di number, ini kepanjangan dari Not a Number
+jika NaN dioperasikan dengan data number lainnya, maka hasilnya akan tetap NaN
+
+untuk parseInt dan parseFloat akan mentoleransi jika ada kesalan di belakang string, misal 1gayuh maka akan jadi 1, kalo gayuh 1 baru jadi NaN
+nah untuk Number tidaK akan ada toleransi, kalo salah ya salah dan hasilnya jadi NaN
+
+isNaN() : function yang digunakan untuk melakukan pengecekan apakah nilainya NaN atau bukan dengan return boolean

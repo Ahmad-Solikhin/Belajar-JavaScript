@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Template</title>
+</head>
+<body>
+<script>
+  let fullName = "Ahmad Solikhin Gayuh Raharjo";
+  const template = `Name : ${fullName}`;
+
+  console.log(template);
+
+  let nilai = 80;
+  const template2 = `Name : ${fullName}, lulus : ${nilai > 70}`;
+  console.log(template2);
+
+  const template3 = `
+Halo nama saya adalah ${fullName}
+Saya memiliki nilai ${nilai}
+  `;
+
+  document.writeln("<pre>")
+  document.writeln(template3)
+  document.writeln("<pre>")
+
+
+</script>
+</body>
+</html>

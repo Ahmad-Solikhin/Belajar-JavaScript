@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion</title>
+</head>
+<body>
+<script>
+
+  // Kalo ga dikonversi datanya, hasilnya akan mirip kayak plus di string
+  let value1 = 1;
+  let value2 = "1";
+  let sum = value1 + value2;
+
+  console.log(sum);
+
+  value1 = parseInt("1");
+  value2 = Number("1.1");
+  sum = value1 + value2;
+
+  console.log(sum);
+
+  console.log(sum.toString() + " Hasil");
+
+  let nanan = Number("Saya");
+
+  console.log(isNaN(nanan));
+
+</script>
+</body>
+</html>
