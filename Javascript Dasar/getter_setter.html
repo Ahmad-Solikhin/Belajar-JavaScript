@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getter Setter</title>
+</head>
+<body>
+<script>
+
+    const person = {
+        firstName: "Ahmad",
+        lastName: "Solikhin Gayuh Raharjo",
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`;
+        },
+        set setFirstName(firstName){
+            this.firstName = firstName;
+        }
+    }
+
+    person.setFirstName = "Muhammad";
+    console.log(person.fullName);
+    console.table(person);
+
+</script>
+</body>
+</html>

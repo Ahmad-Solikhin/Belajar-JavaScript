@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optional Chaining</title>
+</head>
+<body>
+<script>
+  const person = {};
+
+  //Ini akan jadi error
+  //const country = person.address.country;
+
+  let country;
+
+  //cara panjang nya
+  // if (person.address !== undefined && person.address !== null){
+  //   country = person.adderess.country;
+  // }
+
+  //Ini cara pake optional chaining
+  country = person?.address?.country;
+
+  console.log(country);
+
+</script>
+</body>
+</html>

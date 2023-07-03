@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+
+    let arrayKosong = [];
+
+    let names = ["Ahmad", "Solikhin", "Gayuh", "Raharjo"];
+
+    const cities = [];
+    cities.push("Bekasi");
+    cities.push("Semarang");
+    cities.push("Bandung", "Yogyakarta")
+
+    console.table(cities);
+
+    console.log(cities[1]);
+
+    cities[0] = "Kabupaten Bekasi";
+    cities[3] = "Kota Bekasi";
+
+    console.table(cities);
+
+    delete cities[2];
+
+    cities.push(["Jawa Barat", "Jawa Tengah"])
+
+    console.log(cities[2]);
+
+    console.table(cities);
+
+</script>
+</body>
+</html>

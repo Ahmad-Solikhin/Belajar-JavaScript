@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup Alert</title>
+</head>
+<body>
+<script>
+
+    //Ini prompt
+    let name = prompt("Siapa nama anda?");
+
+    //Ini alert
+    alert(`Hello ${name}, ini adalah alert`);
+
+    //Ini confir,
+    let hadir = confirm("Apakah anda hadir hari ini?");
+
+    if (hadir){
+        alert(`Selamat datang ${name}`);
+    }else {
+        alert(`Bye ${name}`);
+    }
+
+</script>
+</body>
+</html>

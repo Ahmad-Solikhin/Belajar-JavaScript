@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring</title>
+</head>
+<body>
+<script>
+
+    let names = ["Ahmad", "Solikhin", "Gayuh", "Raharjo"];
+
+    let [firstName, middleName, lastName, ...others] = names;
+
+    console.log(firstName);
+    console.log(others);
+
+    const person = {
+        firstNamePerson: "Ahmad",
+        lastNamePerson: "Raharjo",
+        gender: "Laki-Laki",
+        address: {
+            city: "Bekasi",
+            province: "West Java"
+        }
+    }
+
+    let {firstNamePerson, lastNamePerson, ...othersPerson} = person;
+    console.log(othersPerson);
+    console.log(typeof othersPerson.address);
+
+    //ini kalo objectnya nested dan mau ambil propertynya
+    const {address: {city, province}} = person;
+    console.log(province);
+
+    //Destructuring di parameter function
+    function displayPerson({gender, address: {city, province}}) {
+        console.log(gender);
+        console.log(city);
+        console.log(province);
+    }
+
+    displayPerson(person);
+
+    function displayName([firstName, ...others]) {
+        console.log(firstName);
+        console.log(others);
+        for (const other of others) {
+            console.log(other);
+        }
+    }
+
+    displayName(names);
+
+    names = ["Ahmad", "Solikhin"];
+
+    const [firstName1, middleName1, lastName1 = "Raharjo"] = names;
+    console.log(firstName1);
+    console.log(lastName1);
+
+    //melakukan destructuring di object dengan nama sesuka kita
+    const {
+        firstNamePerson: namaDepan,
+        lastNamePerson: namaBelakang
+    } = person;
+
+    console.log(namaDepan);
+    console.log(namaBelakang);
+
+</script>
+</body>
+</html>

@@ -53,3 +53,230 @@ untuk parseInt dan parseFloat akan mentoleransi jika ada kesalan di belakang str
 nah untuk Number tidaK akan ada toleransi, kalo salah ya salah dan hasilnya jadi NaN
 
 isNaN() : function yang digunakan untuk melakukan pengecekan apakah nilainya NaN atau bukan dengan return boolean
+
+
+Tipe Data Array
+=========================================
+
+Array di JS mirip kayak di PHP, tipe nya bebas, ukurannya dinamis
+Untuk menambahkan isi ke array bisa menggunakan method push()
+- length() : mendapatkan panjang array
+- array[index] : mendapatkan value berdasarkan index
+- array[index] = value : melakukan replace value pada indeks tersebut
+- delete array[index] : menghapus data berdasarkan index, namun tidak menggeser datanya
+
+Tipe Data Object
+=========================================
+Dalam JS membuat array dengan index selain angka tidak bisa digunakan seperti di PHP
+Kalo dipaksa nanti tipe datanya bukan array lagi tapi menjadi object
+
+Popup
+=========================================
+
+- Alert : untuk memberi peringatan berupa popup teks di browser
+- prompt : meminta input string dari user
+- confirm : meminta input bolean untuk persetujuan dari user
+
+Undefined (tidak didefinisikan)
+=========================================
+
+ini beda sama null, jadi undefined adalah kayak variable yang datanya belum ada tapi kita akses
+Selain itu juga contohnya adalah misal membuat array yang indexnya gada isinya, maka akan keluar tulisan undefined
+Selain array dan variable, undefined juga dapat terjadi jika mengakses property dari objek yang tidak ada
+
+Null
+=========================================
+
+Representasi dari data yang kosong, bedanya sama undefined adalah null ini datanya diisi dengan null
+
+Switch Statement
+=========================================
+
+Ini kayak if tapi switch case lah kayak di baha pemrograman lain
+
+Typeof
+=========================================
+
+Bisa digunakan untuk mengetahui tipe data dari sebuah variable
+return dari typeof ini adalah string dari tipe datanya tersebut
+
+In
+=========================================
+
+Digunakna untuk mengecek apakah ada property dalam sebuah object
+return nya adalah boolean
+selain di object bisa juga dilakukan di array
+
+Ternary Operator
+=========================================
+
+ini penyederhanaan dari if else jadi 1 baris saja
+
+Nullish Coalescing Operator
+=========================================
+
+Nullish adalah null dan udefined atau nilai yang kosong
+
+operator ini kayak ternary tapi buat null dan undefined
+
+Optional Chaining
+=========================================
+
+ini digunakan untuk mengakses property sebuah object dari data nullish
+
+Falsy dan Truthy
+=========================================
+
+Ini fitur dengan value berkonteks boolean
+falsy = false, truthy = true
+
+falsy :
+- false
+- 0, -0
+- "", '', ``
+- null
+- undefined
+- NaN
+
+selain itu akan dianggap truthy
+
+For Loop
+=========================================
+
+for salah satu yang bisa dilakukan perulangan
+ini sama ae kayak for di java sama php
+
+Break dan Continue
+=========================================
+
+Break : dapat digunakan untuk menghentikan switch case dan perulangan
+Continui : melakukan skip kepada perluangan berdasarkan kondisinya dan melanjutkan perulangan selanjutnya
+
+Label
+=========================================
+
+merupakan penanda dengan kata kunci break dan continue
+dengan menggunakan label ini bisa melakukan break atau continue dari loop yang diinginkan
+untuk membuat lablenya bisa menggunakan (namaLable:)
+namun fitur label ini jarang sekali digunakan
+
+For In
+=========================================
+
+melakukan iterasi untuk seluruh property di objeknya, selain itu juga bisa dilakukan di array
+namun tidak direkomendasikan di dalam array, karena ini biasanya digunakan untuk mengetahui property apa saja yang ada di dalam object
+
+For Of
+=========================================
+
+ini digunakan untuk iterasi terhadap isi valuenya, bisa digunakna untuk string, array, dan sebagainya yang iterable
+ini gabisa dilakukan untuk iterasi di object
+
+With Statement
+=========================================
+
+menurunkan scope dari datanya, misal akses property object tanpa menyebut datanya
+with statement ini tidak direkomendasikan karena bisa membuat kode menjadi ambigu karena gatau datanya milik siapa
+
+Function
+=========================================
+
+ya sama ae sih kayak function di bahasa lain
+untuk membuatnya gunakan function namaFunction(){}
+
+dalam function juga bisa diisi dengan parameter untuk mengirim data
+
+return value dalam function dengan kata kunci return, data yang bisa di return hanya 1 saja
+
+Optional parameter, ini maksudnya bisa diisi atau engga, jadi tidak wajib dikirimkan value parameternya
+Jika tidak diisi maka secara otomatis parameternya jadi undefined
+
+Default parameter, ini adalah nilai default jika parameter tersebut tidak dikirimkan
+dengan demikian parameter itu akan otomatis memiliki value berdasarkan default value yang telah di set
+
+Rest Parameter, ini adalah cara dimana bisa mengirimkan banyak parameter ke function dan nanti akan otomatis dikonversi menjadi array
+ketentuannya adalah hanya boleh ada 1 rest parameter di fucntion, jika lebih dari 1 parameter di function harus ada di akhir posisinya
+untuk membuat parameter jadi rest di parameter gunakan (...) diikuti dengan nama parameternya
+Jika sudah punya array dan ingin memasukkannya ke rest parameter bisa menggunakan fitur spread syntax
+untuk mengirimkannya gunakan juga (...) diikuti nama variable arraynya atau arraynya
+
+Dalam JS function bisa dimasukkan kedalam variable, nantinya function itu bisa dimasukkan ekdalam function lainnya dan sebagainya
+
+Anonymous Function
+=========================================
+
+Anonymous function, membuat function tanpa nama dengan cara memasukkannya ke variable
+cara kedua adalah dengan cara memasukikan functionnya ke parameter
+
+Nested Function
+=========================================
+
+Misal membuat function dan didalamnya ada function lagi, function di dalam itu hanya bisa diakses didalam functionnya tersebut
+
+Function Generator
+=========================================
+
+function generator merupakan function untuk membuat data generator
+generator adalah data yang bisa di iterasi seperti array
+untuk membuat functionnya, perlu menggunakan tanda * setelah kata function
+untuk mengembalikan data di tiap iterasi bisa menggunakan keyword yield dan diikuti oleh datanya
+
+Data generator yang dihasilkan bersifat lzay. maksudnya jika datanya tidak diakses maka yield nya tidak akan dieksekusi
+Ini kayak stream di java deh, kalo gadilakuin terminal operator maka ga jalan
+
+Arrow Function
+=========================================
+
+Alternatif membuat function dengan cara lebih sederhana dari biasanya
+Namun ada limitasi tidak bisa digunakan disemua situasi
+menggunakan tanda =>
+kekurangan arrow function :
+- tidak punya fitur arguments object
+- tidak bisa menggunakan function generator
+- tidak bisa menggunakan keyword this
+- tidak bisa akases super
+
+Arrow function ini kayak anonymous function, jadi harus dibuat di variable atau dilempar langsung di parameter
+
+Jika functionnya sangat sederhana yang cuma 1 baris saja, bisa membuat function tanpa {}
+
+Closure
+=========================================
+
+closure adalah kombinasi dari function dan bundle referensi ke data sekitarnya
+dengan bantuan closure dapat membuat function di local scope dan referensi data di sekitar scope tersebut keluar dari scopenya
+misal dari local closure ke global
+
+Objet Method
+=========================================
+
+function yang dibuat bisa dijadikan property dalam object
+caranya juga mirip tinggal masukin variable atau langsung dimasukin ke property
+
+Problem var
+=========================================
+
+var ini tidak memiliki block scope kayak global maupun local
+jadi kalo pake var nanti bakal ambigu, karena walaupun dibuat di local bisa saja diakses di global
+
+Destructuring
+=========================================
+
+digunakan untuk membongkar value2x di array atau object kedalam variable
+dengan fitur ini tidak perlu diambil satu perstau secara manual
+
+saat melakukan destructuring namun datanya tidak ada, bisa ditambahkan default valuenya
+
+Strict Mode
+=========================================
+
+secara default kode JS tidak berjalan secara strict mode
+ketika strict mode dijalankan akan terdapat perbedaan seperti:
+- jika ada silent error maka akan terjadi throw error dan tidak dilanjutkan lagi
+- memperbaiki kesalahan engine JS untuk optimasi
+- menolak beberapa kode perintah yang akan digunakan di ECMAScript
+
+untuk menjalankan strict mode bisa dilakukan dengan cara menuliskan 'use strict' di awal kode
+
+
+

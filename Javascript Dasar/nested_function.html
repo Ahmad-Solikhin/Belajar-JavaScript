@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nested Function</title>
+</head>
+<body>
+<script>
+
+    function outer(name){
+        function inner(name){
+            return name.toUpperCase();
+        }
+        return `Hello : ${inner(name)}`;
+    }
+
+    let nameLower = "gayuh";
+
+    let nameUpper = outer(nameLower);
+    console.log(nameUpper);
+
+</script>
+</body>
+</html>

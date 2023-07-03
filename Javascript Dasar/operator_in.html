@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Operator</title>
+</head>
+<body>
+<script>
+
+    //Untuk object
+    let person = {
+        firstName: "Ahmad",
+        lastName: "Solikhin Gayuh Raharjo",
+        age: 21
+    }
+
+    if ("firstName" in person) {
+        console.log(`Ada, datanya : ${person.firstName}`);
+    } else {
+        console.log("Tidak ada " + person.firstName);
+    }
+
+    //untuk array
+    const names = [null, "Ahmad"];
+    console.log(2 in names);
+</script>
+</body>
+</html>

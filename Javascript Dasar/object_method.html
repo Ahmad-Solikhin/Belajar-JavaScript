@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Method</title>
+</head>
+<body>
+<script>
+
+  function sayHello(name){
+    console.log(`Hello Number 2 ${name}, this is ${this.name}`);
+  }
+
+  /**
+   * kalo pake array function this nya ga ngarah ke object
+   * jadi harus buat function nya pake yang kayak dibawah ini
+   */
+
+  const person = {
+    name: "Ahmad",
+    sayHello: function (name) {
+      console.log(`Hello ${name}, this is ${this.name}`)
+    }
+  }
+
+  person.sayHello2 = sayHello;
+
+  person.name = "Solikhin";
+
+  person.sayHello("Gayuh");
+  person.sayHello2("Solikhin");
+  console.log(person);
+
+  console.log(this);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anonymous Function</title>
+</head>
+<body>
+<script>
+
+  //cara 1, dimasukkan ke variable
+  let say = function (name){
+    console.log(`Hello ${name}`);
+  }
+
+  say("Raharjo");
+
+  //cara 2, masukkan dalam parameter
+  function giveMeName(callback){
+    callback("Gayuh");
+  }
+
+  giveMeName(function (name){
+    console.log(`Cara 2 ${name}`);
+  });
+
+</script>
+</body>
+</html>

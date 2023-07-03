@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+
+  function sayHelloWorld(){
+    document.writeln("<p>Hello World!</p>")
+  }
+
+  for (let i = 0; i < 10; i++) {
+    sayHelloWorld();
+  }
+  sayHelloWorld();
+
+  //function with parameter
+  function sayHi(name){
+    console.log(`Hallo ${name}`);
+  }
+
+  sayHi("Gayuh");
+  sayHi("Amanda");
+
+  //function with return value
+  function sayHelloTo(firstName, lastName){
+    return `Halo ${firstName} ${lastName}`;
+  }
+
+  const resultSayHelloTo = sayHelloTo("Ahmad", "Raharjo");
+  console.log(resultSayHelloTo);
+
+  //optional function test
+  function optionalFunction(satu, dua){
+    console.log(satu);
+    console.log(dua);
+  }
+
+  optionalFunction();
+
+  //test default value function
+  function defaultFunction(name, gender = "unknown"){
+    console.log(name);
+    console.log(gender);
+  }
+
+  defaultFunction("Ahmad", "Pria");
+  defaultFunction("Budi");
+
+  //test rest parameter function
+  function restParameterFunction(name, ...data){
+    let sum = 0;
+    for (const d of data){
+      sum += d;
+    }
+    console.log(`${name}, total : ${sum}`);
+  }
+
+  restParameterFunction("Ahmad", 10, 20, 20, 121);
+
+  const values = [10,10,10,10];
+
+  restParameterFunction("Amanda", ...values);
+
+  //Function di dalam variable
+  function variableFunction(name){
+    console.log(`Hello ${name}`);
+  }
+
+  let hello = variableFunction;
+
+  hello("Ahmad");
+
+  //function in parameter
+  function giveMeName(callback, name){
+    callback(name);
+  }
+
+  giveMeName(hello, "Solikhin");
+
+</script>
+</body>
+</html>

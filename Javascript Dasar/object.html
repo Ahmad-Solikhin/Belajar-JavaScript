@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+    const objectKosong = {};
+
+    const manusia = {};
+    manusia["nama"] = "Ahmad Solikhin Gayuh Raharjo";
+    manusia["usia"] = 21;
+    manusia["alamat"] = "Bekasi";
+
+    console.table(manusia);
+
+    delete manusia["usia"];
+
+    console.table(manusia);
+
+    // Cara lain buat object
+    const manusia2 = {
+        "nama" : "Amanda Rizkyta Hamidah",
+        "alamat" : "Kota Bekasi",
+        "usia" : 21
+    };
+
+    console.table(manusia2);
+
+    // Cara pertama mengakses
+    console.log(manusia2['nama']);
+
+    console.log("Nama : " + manusia2.nama);
+
+</script>
+</body>
+</html>

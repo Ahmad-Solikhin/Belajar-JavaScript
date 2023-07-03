@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Generator</title>
+</head>
+<body>
+<script>
+
+    function* createNames() {
+        yield "Ahmad";
+        yield "Solikhin";
+        yield "Gayuh";
+        yield "Raharjo";
+    }
+
+    const names = createNames();
+    for (const name of names) {
+        console.info(name);
+    }
+
+    //Contoh untuk kasus yang lebih kompleks sedikit
+    function* makeOdd(value) {
+        for (let i = 1; i <= value; i++) {
+            if (i % 2 !== 0) {
+                yield i;
+            }
+        }
+    }
+
+    const ganjil = makeOdd(100);
+    for (const number of ganjil) {
+        console.info(number);
+    }
+
+    //ambil data satu2x
+    const ganjilBaru = makeOdd(10);
+    console.log(ganjilBaru.next().value);
+    console.log(ganjilBaru.next().value);
+
+</script>
+</body>
+</html>

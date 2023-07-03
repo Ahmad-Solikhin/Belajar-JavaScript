@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+<body>
+<script>
+
+  //dengan parameter
+  let sayHello = (name) => {
+    console.log(`Hello ${name}`);
+  }
+
+  sayHello("Gayuh");
+
+  //tanpa parameter
+  let sayHello2 = () => {
+    console.log("Hello World");
+  }
+
+  sayHello();
+
+  //function 1 block
+  let sayHello3 = (name, gender) => `Hello ${gender} ${name}`;
+
+  console.log(sayHello3("Gayuh", "Pria"));
+
+  //arrow function sederhana 1 parameter
+  let sayHello4 = name => "Guten Morgen " + name;
+  console.log(sayHello4("Ahmad"));
+
+  //Arrow function in parameter fucntion
+  const giveMeName = callback => callback("Ahmad");
+
+  giveMeName(name => console.log(`Hello Mister Anonymous ${name}`));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closure</title>
+</head>
+<body>
+<script>
+
+    const createAdder = value => {
+        const owner = "Owner : Ahmad";
+
+        const add = param => {
+            console.log(owner);
+            return value + param;
+        }
+
+        return add;
+    }
+
+    const adder = createAdder(2);
+
+    let result = adder(10);
+    let result1 = adder(5);
+    console.log(result);
+    console.log(result1);
+
+</script>
+</body>
+</html>
