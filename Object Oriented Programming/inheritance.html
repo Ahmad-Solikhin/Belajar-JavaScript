@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance</title>
+</head>
+<body>
+<script>
+
+    class Employee {
+        constructor(firstName) {
+        this.firstName = firstName;
+        }
+
+        sayHello(name) {
+            console.info(`Hello ${name}, my name is employee ${this.firstName}`);
+        }
+    }
+
+    class Manager extends Employee {
+        //Ini wajib memanggil constructor parent nya, walaupun parent gapunya constructor tetep wajib dipanggil
+        constructor(firstName, lastName) {
+            super(firstName);
+            this.lastName = lastName;
+        }
+        sayHello(name) {
+            console.info(`Hello ${name}, my name is manager ${this.firstName}`);
+        }
+    }
+
+    const gayuh = new Manager();
+    gayuh.firstName = "Gayuh";
+    gayuh.sayHello("Budi");
+
+    const budi = new Employee();
+    budi.firstName = "Budi";
+    budi.sayHello("Gayuh");
+
+    console.log(gayuh);
+    console.log(budi);
+
+</script>
+</body>
+</html>

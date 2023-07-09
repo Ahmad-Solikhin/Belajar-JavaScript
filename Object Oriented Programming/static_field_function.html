@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Field and Function</title>
+</head>
+<body>
+<script>
+
+  class Configuration{
+    static #name = "Configuration";
+    static version = "1.0";
+
+    static getName(){
+      return this.#name;
+    }
+  }
+
+  console.log(`Version : ${Configuration.version}`);
+  console.log(`Name : ${Configuration.getName()}`);
+
+</script>
+</body>
+</html>

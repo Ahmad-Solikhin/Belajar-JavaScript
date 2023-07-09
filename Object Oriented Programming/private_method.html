@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Method</title>
+</head>
+<body>
+<script>
+
+  class Person{
+
+    say(name){
+      if (name){
+        this.#SayHelloWithName(name);
+      }else {
+        this.#sayWithoutName();
+      }
+    }
+
+    #SayHelloWithName(name){
+      console.log(`Hello ${name}`);
+    }
+
+    #sayWithoutName(){
+      console.log("Hello");
+    }
+  }
+
+  const budi = new Person();
+  budi.say();
+
+</script>
+</body>
+</html>

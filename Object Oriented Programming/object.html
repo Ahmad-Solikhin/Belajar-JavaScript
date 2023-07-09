@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+    function Person(firstName = null, lastName = null) {
+        //property
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        //method
+        this.sayHello = function (name) {
+            console.log(`Hello ${name}, this is ${this.firstName}`);
+        }
+    }
+
+    const ahmad = new Person("Ahmad");
+
+    const amanda = new Person("Amanda", "Hamidah");
+
+    console.log(ahmad);
+    console.log(amanda);
+
+    ahmad.sayHello(amanda.firstName);
+
+</script>
+</body>
+</html>

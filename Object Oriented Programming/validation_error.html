@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation Error</title>
+</head>
+<body>
+<script>
+
+  class ValidationError extends Error{
+    field;
+    constructor(message, field) {
+      super(message);
+      this.field = field;
+    }
+  }
+
+  class MathUtil{
+    static sum(...numbers){
+      if (numbers.length === 0){
+        throw new ValidationError("Parameter must be grater than 0", "numbers");
+      }
+
+      let total = 0;
+      for (const number of numbers) {
+        total += number;
+      }
+
+      return total;
+    }
+  }
+
+  try{
+    MathUtil.sum();
+  }catch (error){
+    console.error(`Error Message : ${error.message}`);
+    console.error(`Error Field : ${error.field}`);
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Method</title>
+</head>
+<body>
+<script>
+
+  class LivingThing{
+    getBreatheTools(){
+      console.log("Breathe using default tools");
+    }
+  }
+
+  class Person extends LivingThing{
+    getBreatheTools() {
+      console.log("Breathe using paru-paru");
+    }
+  }
+
+  const budi = new Person();
+  budi.getBreatheTools();
+
+</script>
+</body>
+</html>

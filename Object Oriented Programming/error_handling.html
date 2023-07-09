@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Handling</title>
+</head>
+<body>
+<script>
+
+    class MathUtil{
+        static sum(...numbers){
+            if (numbers.length === 0){
+                throw new Error("Parameter must be grater than 0");
+            }
+
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+
+            return total;
+        }
+    }
+
+    try{
+     const total = MathUtil.sum(1,2);
+     console.log(`total : ${total}`);
+    }catch (error){
+        console.error(error.message);
+    }finally {
+        console.log("Selesai");
+    }
+
+</script>
+</body>
+</html>

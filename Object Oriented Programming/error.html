@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<script>
+
+  class MathUtil{
+    static sum(...numbers){
+      if (numbers.length === 0){
+        throw new Error("Parameter must be grater than 0");
+      }
+
+      let total = 0;
+      for (const number of numbers) {
+        total += number;
+      }
+
+      return total;
+    }
+  }
+
+  const total = MathUtil.sum();
+
+</script>
+</body>
+</html>

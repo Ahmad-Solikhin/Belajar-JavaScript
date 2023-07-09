@@ -1,0 +1,95 @@
+EcmaScript lama sebelum versi 6
+====================================================
+
+dalam membuat object di js lama dilakukan dengan menggunakan function
+dalam membuatnya menggunakan constructor function yang akan mereturnkan objectnya
+dan untuk membuar objectnya menggunakan function gunakan kata kunci new
+
+walaupun membuat object dari constructor function tetap bisa ditambahkan dengan cara . nama propertynya
+untuk menambahkan property di constructor function bisa menggunakan keyword this
+
+selain menulis property, dalam constructor function juga bisa dibuat method
+dan secara otomatis object yang dibuat dari constructor function akan memiliki method tersebut
+
+dalam constructor function juga bisa ditambahkan parameter, dan nantinya bisa langsung dikirimkan melalui parameter dan menjadi nilainya
+
+Constructor Inheritance
+
+di dalam constructor dapat memanggil constructor lain sehingga constructor tersebut akan mewarisi semua yang ada di constructor yang dipanggil
+untuk memanggilnya dapat menggunakan NamaConstructor.call(this, parameter) : parameter itu ngikutin parameter dari constructor yang diambil
+
+Prototype
+
+JS sebenarnya merupakan bahasa pemrograman berbasis prototype
+
+saat membuat constructor function akan otomatis dibuatkan prototypenya
+untuk mengakses prototype nya gunakan __proto__
+
+dalam prototype juga dapat ditanbahkan property yang nantinya akan diturunkan ke semua object turunannya
+
+Class
+====================================================
+
+dalam JS baru bisa menggunakan keyword class
+
+caranya dengan class namaClass {}
+dan untuk membuat object dari class tersebut caranya masih sama menggunakan new
+
+constructor di class
+untuk menambahkan constructor dalam class bisa menggunakan keyword constructor
+
+untuk menambahkan method di class tinggal masukin function aja kek java tanpa keyword function
+
+Class Inheritance
+dengan fitur class di ES6 dapat melakukan inheritance dengan keyword extends
+dengan class ini sama kayak property inheritance namun hanya bisa memiliki 1 parent
+
+Super Constructor
+jika ingin memanggil constructor dari parentnya dalam class childnya, wajib memanggil parent constructornya walaupun di parent gada constructor
+
+Super Method
+selain constructor, super juga bisa digunakan untuk akses method di parent nya, sama ae kek super di java
+
+Getter dan Setter di Class
+dalam class dapat dibuat getter dan setter nya
+dan getter dam setter yang dibuat dalam class juga tetap akan terbentuk di prototype
+
+Public Class Field
+jadi bisa membuat field ditempatkan diluar constructor yang selevel dengan penempatan method
+dengan field public bisa diakses dari luar class secara langsung, defaultnya semua field dalam class adalah public
+untuk membuat fieldnya bisa langsung buat nama fieldnya dan valuenya jika mau
+Jika tidak diberikan value maka nilainya akan undefined
+
+Private Class Field
+untuk private field hanya bisa diakses di dalam class nya saja
+untuk membuat field nya private bisa menggunakan symbol # sebelum nama fieldnya
+
+Private Method
+cara membuat method menjadi private juga bisa menggunakan symbol # di awal method
+
+Operator Instanceof
+Digunakan untuk mengetahui apakah objek merupakan instance dari sebuah class, kembaliannya adalah boolean
+
+Static Field
+static kata kunci pada field maupun method, nantinya yang diberikan static ini maka bisa diakses tanpa harus membuat objectnya
+dengan static ini juga gabakal dijadiin property di class itu, karena nantinya akan menjadi milik class itu sendiri
+
+Static Method
+sama aja kayak static field, nanti jadinya bakal dapat diakses tanpa harus buat objectnya
+
+Error
+untuk melempar error atau mentrigger error bisa menggunakan keyword throw error
+jika terjadi throw error maka programmnya akan otomatis berenti
+
+Error Handling
+kalau terjadi error dan tidak ingin program berhenti bisa ditangkap error nya menggunakan try catch kek bahasa prmrograman lain
+jik terjadi error di try maka akan dilempar ke catch, dan di catch bisa dilakukan kode sesuka kita
+
+Membuat Class Error
+di JS sudah ada standar class error, namun di js bisa membuat error sendiri
+caranya dengan membuat class yang extends Error class
+dan untuk constructornya tambahkan parameter error
+
+Iterable dan Iterator
+jika objectnya extends Iterable bisa menggunakan perulangan for of
+

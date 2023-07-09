@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instanceof</title>
+</head>
+<body>
+<script>
+
+  class Employee{
+
+  }
+
+  //Kalo dia turunan dari inheritance objectnya maka kalo dicek instancce of dari parent nya bakal tetep true
+  class Manager extends Employee{
+
+  }
+
+  const budi = new Employee();
+  const anto = new Manager();
+
+  console.log(budi instanceof Employee);
+  console.log(anto instanceof Manager);
+
+</script>
+</body>
+</html>
