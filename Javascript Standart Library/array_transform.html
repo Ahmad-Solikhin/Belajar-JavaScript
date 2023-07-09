@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Transform</title>
+</head>
+<body>
+<script>
+
+  const names = "Ahmad Solikhin Gayuh Raharjo".split(" ");
+
+  const namesUpper = names.map(value => {
+   return value.toUpperCase()
+  });
+
+  console.log(namesUpper);
+
+  const namesReduce = names.reduce((previousValue, currentValue) => {
+    return previousValue + " " + currentValue;
+  })
+  console.log(namesReduce);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+
+  const array = ["Ahmad", "Solikhin", "Gayuh", "Raharjo"];
+
+  array.forEach(function (value, index){
+    console.log(index + " : " + value);
+  });
+
+  console.log("");
+
+  array.forEach((value, index) => {
+    console.log(index + " : " + value);
+  });
+
+  console.log("");
+
+  array.forEach(value => console.log(value));
+
+</script>
+</body>
+</html>

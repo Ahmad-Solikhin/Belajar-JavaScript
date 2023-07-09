@@ -1,0 +1,52 @@
+Number
+==============================================
+
+Digunakan untuk melakukan konversi ke tipe data number, jika nilai yang dikonversi tidak sesuai maka akan berubah jadi NaN
+
+Selain konversi ke tipe data number, ada static method lainnya pada Number
+
+Instance method, untuk menggunakannya harus membuat object dari Number nya
+contoh method yang sering digunakan adalah toLocalString(Locale) contohnya toLocalString(id_ID) dan toString
+
+String
+==============================================
+
+Dapat digunakan untuk melakukan manipulasi string seperti menjadi lowerCase dan upperCase dan sebagainya
+dengan string ini juga bisa dilakukan untuk menganalisa pattern menggunakna regex
+
+Array
+==============================================
+
+Ini digunakan untuk memanipulasi data array
+
+dalam array bisa melakukan perulangan dengan menggunakan forEach
+caranya array.forEach(function (index, value) {}) atau menggunakan arrow function
+
+Queue
+Ini adalah antrian yang mengimplementasikan FIFO
+dalam membuat Queue dari JS bisa memanfaatkan array, caranya untuk menambahkan data menggunakan push dan untuk mengambilnya menggunakan shift
+
+Stack
+Ini kebalikan dari Queue dimana mengimplementasi LIFO
+Untuk menambah datanya bisa menggunakan push dan mengambilnya menggunakan pop
+
+Array Search
+- find(value => boolean) : value = mencari data sesuai kondisi
+- findIndex(value => boolean) : number = mencari data index sesuai kondisi
+- includes(value) : boolean = mengecek apakah ada datanya
+- indexOf(value) : number =  mengecek posisi index dari data
+- lastIndex(value) : number = mengecek posisi index dari data terakhir
+
+Array Filter
+digunakan untuk melakukan filter pada array menggunakan kondisi dan mereturn array baru
+fileter(value => condition) : array
+
+Array Transform
+Merubah bentuk araay
+- map(value => result) : Array<result> = menghasilkan array baru sesuai dengan map nya
+- reduce(resultBefore, value => result) : result = melakukan transform menggunakan value array dan value selanjutnya
+
+
+
+
+
