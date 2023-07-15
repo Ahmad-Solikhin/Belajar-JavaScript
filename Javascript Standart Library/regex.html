@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex</title>
+</head>
+<body>
+<script>
+
+  {
+    //create regex
+
+    const regex1 = /gayuh/;
+    const regex2 = new RegExp("gayuh");
+    const regex3 = new RegExp(/gayuh/);
+  }
+
+  {
+    //test regex
+
+    const regex = /gayuh/;
+
+    const name = "Ahmad Solikhin Gayuh Raharjo";
+
+    const result = regex.exec(name.toLowerCase());
+    console.log(result);
+    console.log(regex.test(name.toLowerCase()));
+  }
+
+  {
+    //regex modifier
+
+    const regex = /gayuh/i;
+
+    const name = "Ahmad Solikhin Gayuh Raharjo";
+
+    const result = regex.exec(name);
+    console.log(result);
+    console.log(regex.test(name));
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+<script>
+
+  {
+    //create date
+
+    const date1 = new Date();
+    console.log(date1);
+
+    const date2 = new Date(2001, 10, 7);
+    console.log(date2);
+
+    const date3 = new Date(2001, 10, 7, 12, 10, 1, 9);
+    console.log(date3);
+
+    const date4 = new Date(10000);
+    console.log(date4);
+  }
+
+  {
+    //milis
+
+    const date1 = Date.now();
+    console.log(date1);
+
+    const date2 = new Date(2001, 10, 7);
+    console.log(date2.getTime());
+  }
+
+  {
+    //parsing
+
+    const time = "2001-10-07";
+    const date1 = Date.parse(time);
+    console.log(date1);
+
+    const date2 = new Date(date1);
+    console.log(date2);
+  }
+
+  {
+    //getter & setter
+
+    const date1 = new Date();
+    date1.setFullYear(2001);
+
+    console.log(date1.getFullYear());
+    console.log(date1.getDay());
+    console.log(date1.getMonth());
+  }
+
+</script>
+</body>
+</html>

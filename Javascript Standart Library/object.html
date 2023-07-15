@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+  {
+    //Freeze and seal
+    const person = {
+      firstName: "Ahmad",
+      lastName: "Raharjo"
+    }
+
+    Object.freeze(person);
+
+    person.firstName = "Gayuh";
+    delete person.lastName;
+    person.age = 21;
+
+    console.log(person);
+
+    const person2 = {
+      firstName: "Ahmad",
+      lastName: "Raharjo"
+    }
+
+    Object.seal(person2);
+    person2.age = 21;
+    person2.firstName = "Gayuh"
+    console.log(person2);
+  }
+
+  {
+    //Assing
+    const target = {
+      firstName: "Solikhin"
+    }
+    const source = {
+      lastName: "Gayuh"
+    }
+
+    Object.assign(target, source);
+    console.log(target);
+  }
+
+  {
+      //names & values
+      const person = {
+          lastName: "Gayuh",
+          firstName: "Ahmad"
+      }
+
+      console.info(Object.values(person));
+      console.info(Object.getOwnPropertyNames(person));
+  }
+
+
+</script>
+</body>
+</html>

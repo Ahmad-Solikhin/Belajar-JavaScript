@@ -46,6 +46,144 @@ Merubah bentuk araay
 - map(value => result) : Array<result> = menghasilkan array baru sesuai dengan map nya
 - reduce(resultBefore, value => result) : result = melakukan transform menggunakan value array dan value selanjutnya
 
+Object
+==============================================
+Ada beberapa static method yang ada dalam Object, walau ada beberapa instance nya tapi sangat jarang digunakan
+
+Freeze & Seal
+- Freeze : Object tidak bisa diubah atau dihapus attributenya
+- Seal : Object bisa diubah tapi tidak bisa dihapus attributnya
+
+- Assign : menggabungkan semua attribute dari sebuah object ke object lain = Object.assign(target, source).
+    Jika ada yang sama dari source di targetnya maka yang diambil adalah yang di sourcenya
+
+- Values : mengambil semua values dari objectnya => array
+- getOwnPropertyNames : mengambil semua nama property dari object nya => array
+
+JSON
+==============================================
+JSON data berupa string yang mirip dengan JS Object
+
+- stringify : konversi object ke string
+- parse : konversi string ke object
+
+Bigint
+==============================================
+Ini digunakan ketika angkanya udah diluar dari safe area dari integer
+
+untuk melakukan integer biasa ke bigint bisa dilakukan dengan cara: Bigint(valueInteger)
+
+Date
+==============================================
+date adalah milisecond sejak tanggal 1 januari 1970
+
+- new Date() : membuat date saat ini
+- new Date(year, month, date) : membuat date dengan tanggal yang ditentukan
+- new Date(year, month, date?, hour?, minute?, second?, milis?) : menentukan smapai milis
+- new Date(timestamp) : membuat date dari milis yang dipunyai
+- Date.now() : mendapatkan milis saat ini
+- getTime() : mendapatkan milis dari object date yang sudah dibuat
+
+parsing date dari string
+format dari stringnya harus
+- YYYY-MM-DDTHH:mm:ss.sssZ
+- YYYY-MM-DD
+- YYYY-MM-DDTHH:mm:ss
+
+hasil parsing dari string tersebut adalah timestamp bukan object date
+
+dalam date ada getter dan setter yang merupakan instance objectnya
+- getDay()
+- getDate()
+- getFullYear()
+- setDate()
+- setHour()
+
+Math
+==============================================
+Tidak bisa digunakan untuk tipe data bigint
+isinya adalah kumpulan static method untuk rumus2x matematika
+
+Boolean
+==============================================
+ini wrapper untuk tipe primitif dari boolean
+- toString() : konversi ke string
+- valueOf() : mendapatkan nilai primitf boolean
+
+Map
+==============================================
+Ini kayak object yang pasangan key dan value, namun sudah disediakan method2x yang dapat digunakan
+
+map                                     object
+pertama dibuat gada key                 ada default key karena udah ada prototype
+key bisa tipe data apapun               keynya harus string atau simbol
+jumlah key bisa diketahui dengan size   harus manual
+tidak bisa lgsg konversi json           bisa lgsg ke json
+
+- size : mendapatkan ukuran mapnya
+- clear : hapus semua isinya
+- delete : hapus berdasarkan key
+- get : mendapatkan value
+- has : mengecek apakah ada key nya
+- set(key, value) : kalo udah ada di update, kalo belum di add
+- forEach(key, value) : melakukan iterasi
+
+Set
+==============================================
+kayak set di java, list tapi isinya unique
+
+- size
+- add(value)
+- has(value)
+- delete()
+- foreach
+
+Symbol
+==============================================
+simbol adalah tipe data yang digaransikan selalu unique
+
+cara menggunakannya
+Symbol(description?)
+
+Kadang kalo symbolnya dibuat variable jadi harus dipake terus variable itu
+tapi kalo mau disimpen di sistem bisa menggunakan Symbol.for(key), nanti symbol yang sama akan selalu dikembalikan
+
+Regex
+==============================================
+Dengan regex bisa mencari text dengan polanya, buat nyari pola cari di google aja banyak
+
+Di js bisa make literal notation atau menggunakan class regex
+- exec(value) : return value jika ada, jika tidak ada akan return null
+- test(value) : ini buat ngecek apakah ada atau engga
+
+Regex modifier
+- i : menjadi incase sensitive
+- g : dicari secara global (dicari semua), defaultnya kalo udah nemu satu akan berenti
+- m : multiline, pencarian dilakukan tiap new line
+
+Encode
+==============================================
+Untuk mengirim value melalui url bisanya harus diencode
+Misal saat kirim query parameter seperti data=&nama=nama&
+maka value untuk data adalah kosong dan dianggap punya query baru untuk nama
+- encodeURI(value) : melakukan encode value, namun symbol2x tidak akan diubah
+- encodeURIComponent(value) : semuanya termasuk simbol akan diencode
+- decodeURI(encoded)
+- decodeURIComponent(encoded)
+
+Kalo mau encode yang value parameternya ada simbol, lebih baik yang diencode itu valuenya aja ya
+
+Base64
+==============================================
+ini format text yang aman dikirimkan ke web
+dengan penggunaan base64 akan lebih aman mengirim value dari client ke server
+- btoa(value) : encode ke base64
+- atob(value) : decode ke value asli
+
+Eval
+==============================================
+ini merupakan function untuk mengeksekusi kode JS dari string
+tapi ini ga terlalu direkomendasikan
 
 
 

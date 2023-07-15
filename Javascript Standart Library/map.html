@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+<script>
+
+  const persons = new Map();
+  persons.set(1, {
+    firstName: "Ahmad",
+    lastName: "Raharjo"
+  });
+
+  persons.set(2, {
+    firstName: "Gayuh",
+    lastName: "Solikhin"
+  });
+
+  console.log(persons);
+
+  persons.forEach((value, key) => {
+    console.log(key + " : " + value.firstName);
+  })
+
+</script>
+</body>
+</html>

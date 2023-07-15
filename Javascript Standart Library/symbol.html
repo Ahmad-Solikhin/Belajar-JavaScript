@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol</title>
+</head>
+<body>
+<script>
+
+  {
+    const firstName = Symbol("firstName");
+    const lastName = Symbol("lastName");
+
+    const persons = new Map();
+    persons.set(firstName, "Ahmad");
+    persons.set(lastName, "Raharjo");
+
+    console.log(persons);
+  }
+
+  {
+    const persons = new Map();
+    persons.set(Symbol.for("firstName"), "Ahmad");
+    persons.set(Symbol.for("lastName"), "Raharjo");
+
+    console.log(persons.get(Symbol.for("lastName")));
+  }
+
+</script>
+</body>
+</html>

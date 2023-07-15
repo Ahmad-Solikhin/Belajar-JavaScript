@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encode</title>
+</head>
+<body>
+<script>
+
+  {
+    const url = "http://contoh.com?name=Ahmad Solikhin Gayuh Raharjo";
+    console.log(url);
+
+    const encode = encodeURI(url);
+    console.log(encode);
+
+    const decoded = decodeURI(encode);
+    console.log(decoded);
+  }
+
+  {
+    const value = "&gayuh=gayuh&"
+    const url = "http://contoh.com?name=Ahmad Solikhin Gayuh Raharjo";
+    console.log(url + value);
+
+    const encode = encodeURIComponent(value);
+    console.log(url + encode);
+
+    const decoded = decodeURIComponent(encode);
+    console.log(url + decoded);
+  }
+
+</script>
+</body>
+</html>
