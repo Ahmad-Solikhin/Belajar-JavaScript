@@ -1,0 +1,37 @@
+==========================================
+Modules
+==========================================
+Dengan menggunakan module dapat selektif untuk memilih bagian mana yang bisa terekspose keliuar dan bisa digunakan pada html nya
+dengan demikian file yang berada pada file js secara default tidak akan bisa digunakan diluar file kecuali diminta untuk diekspose
+
+Membuat module dengan cara membuat file JS seperti biasa, yang berbeda adalah cara load pada html yang bukan js lagi type nya
+Melainkan menggunakan type module
+Karena file js dan module adalah sama biasanya file dari module menggunakan ekstensi .mjs, tapi ini ga wajib kok
+
+Export
+==========================================
+Kata kunci yang digunakan untuk menekspose kode dari sebuah module
+untuk export bisa ditambahkan diawal function atau variable atau lainnya
+
+Import
+==========================================
+Ini adalah kata kunci yang harus digunakan untuk menggunakan function atau variable yang di export
+caranya adalah
+- import namaFunction from lokasiModule
+- import {namaFunction1, namaFunction2} from lokasiModule
+untuk script yang ada di html juga harus ditentukan type nya jadi module
+
+Variable di Module
+==========================================
+Kalo di js biasa maka variable yang global bisa digunakan di file lain
+Namun jika menggunakan module walaupun variable itu di export dan digunakan di tempat lain maka variable tersebut tidak bisa diubah dan hanya bisa digunakan pada modul tersebut
+
+Class di Module
+==========================================
+Dalam module juga bisa ditambahkan class, class tersebut juga bisa di export atau tidak
+
+Export Multiple
+==========================================
+Bisa langsung sekaligus kumpulan dari function, class, maupun variable sekaligus pada bagian bawah dari file
+
+
