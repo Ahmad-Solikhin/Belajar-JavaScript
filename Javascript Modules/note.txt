@@ -34,4 +34,15 @@ Export Multiple
 ==========================================
 Bisa langsung sekaligus kumpulan dari function, class, maupun variable sekaligus pada bagian bawah dari file
 
+Alias
+==========================================
+Dengan alias bisa mengubah nama dari variable, function, class, dan sebagainya menjadi nama yang berbeda
+ada dua cara dalam menggunakan alias, melalui export dan import. namun alias di export tidak direkomendasikan karena bisa aja namanya banyak yang sama juga
+Caranya sama kek di pyhton sih
+
+Export Default
+==========================================
+Jadi ini jika hanya ingin melakukan export satu saja dalam 1 file, jadi nanti pas import bisa make alias atau engga
+
+
 
