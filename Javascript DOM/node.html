@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node</title>
+</head>
+<body>
+
+<ul id="menu">
+    <li id="first">First</li>
+    <li id="second">Second</li>
+    <li id="third">Third</li>
+</ul>
+<script>
+
+    const menu = document.getElementById("menu");
+    menu.removeChild(document.getElementById("third"));
+    console.log(menu);
+    console.log(menu.childNodes);
+
+    const second = document.getElementById("second");
+    console.log(second);
+    console.log(second.textContent);
+    console.log(second.nextElementSibling);
+
+</script>
+</body>
+</html>

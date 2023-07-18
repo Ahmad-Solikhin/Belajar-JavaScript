@@ -1,0 +1,27 @@
+Tipe Data
+==============================================
+Dalam DOM tipe data tidak terlalu banyak, tipe data ini adalah object dari DOM nya
+- Document : representasi halaman web
+- Node : base claass semua tipe data di DOM
+- Element : representasi object element di halaman web, kayak head, body, form, input, dll
+- NodeList : array/collection yang berisikan node
+- Attr : attributr, representasi object attribute dalam element
+- NamedNodeMap : collection berisikan Attr dalam bentuk Map
+
+Document
+==============================================
+Satu halaman web, terdapat satu dokument dan ga perlu buat secara mannual
+Document memiliki banyak properti untuk mendapatkan detail dari element, seperti body dan sebagainya
+
+Node
+==============================================
+node adalaha base class dari document, element, dan attr
+semua fitur yang ada di node dimiliki oleh semua turunannya
+
+salah satu cara mendapatkan nodenya adalah getElementById() : mengambil element berdasarkan ID
+
+Node Property
+==============================================
+bisa mengakses node lain seperti ambil child, mengetahui siblings atau node sebelahnya dan sebagainya
+node juga memiliki banyak method, methodnya dapat digunakan untuk melakukan manipulasi data node
+
