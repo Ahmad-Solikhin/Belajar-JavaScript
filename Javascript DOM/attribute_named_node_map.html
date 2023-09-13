@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Named Node Map</title>
+</head>
+<body>
+<img id="logo" src="https://www.programmerzamannow.com/img/pzn.png" alt="alternatif">
+
+<script>
+  const logo = document.getElementById("logo");
+  const attributes = logo.attributes;
+
+  for (let attribute of attributes) {
+      console.log(`${attribute.name} => ${attribute.value}`);
+  }
+
+</script>
+</body>
+</html>

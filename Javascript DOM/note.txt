@@ -25,3 +25,96 @@ Node Property
 bisa mengakses node lain seperti ambil child, mengetahui siblings atau node sebelahnya dan sebagainya
 node juga memiliki banyak method, methodnya dapat digunakan untuk melakukan manipulasi data node
 
+Element
+==============================================
+Element adalah node yang berbentuk elemnt HTML seprti <head>, <body>, <div>, dll
+element banyak sekalali property yang dimiliki, cari aja nanti di dokumentasinya ges
+
+elemnt juga memiliki banyak method yang bisa dilihat di dokumentasinya
+
+Cara membuat element adalah dengan menggunakan method createElement(tagnya) pada object document
+Dan untuk menambhaknnya bisa menggunakan appendChild
+
+NodeList
+==============================================
+ini adalah kumpulan dari node
+Misal ini bisa didapatkan jika ingin mengambil child dari sebuah node
+Method bawaan dari nodelist kebanyakan merupakan perulangan untuk mengakses tiap node nya
+Conoth method yang digunakan adalah :
+- querySelectorAll(tagnya)
+
+NodeList dibagi menjadi dua :
+- Live : perubahan pada nodelistnya akan merubah semua nodelist yang sama
+- Static : perubahan pada nodelistnya tidak akan berubah pada nodelist yang sama
+
+- childNode merupakan live
+- querySelectorAll merupakan static
+
+Attr (Attribute)
+==============================================
+Ini merupakan pasnagan antara key-value, keynya adalah nama attribute dan valuenya adalah value attributenya
+Contohnya adalah pada tag img, attributenya bisa berupa id, src, dan alt
+Untuk mendapatkan attributenya bisa menggunakan getAttributeNode(attributenya)
+
+Namun biasanya lebih sering langsung mengambil value dari attributenya secara langsung
+Untuk mendapatkannya bisa menggunakan getAttribute(attributenya)
+
+Untuk membuat attribute bisa menggunakan method createAttribute(attributenya) dari object document
+Dan untuk menambahkan attribute tersebut ke element bisa menggunakan element.setAttributeNode(attr)
+Atau bisa langsung juga dengan cara element.setAttribute(key, value)
+
+NamedNodeMap
+==============================================
+Ini kayak nodelist tapi ini kumpulan dari attribute
+Isi methodnya juga kebanyakan utnuk iterasi data dan juga ada grouping
+
+Text Node
+==============================================
+Teks tanpa tag dalam html bukan lah sebuah elemtn melainkan langsung sebuah node
+Lebih tepatnya ini adalah Text Node
+
+Text node ini tidak direkomendasikan karena sangat sulit untuk mengambilnya
+
+Selain mendapatkan text, bisa juga membuat text node dengan menggunakan createTextNode(string)
+
+Event Handler
+==============================================
+Setiap node memiliki kemampuan untuk bereaksi terhadap suatu kejadian
+Misal seperti onClick, onHover dan sebagainya
+Ada dua cara menambahkan event handler dalam node dengan :
+- Event Target :
+    - addEventListener(type, callback) menambahkan event listener baru
+    - removeEventListener() menghapus event listener
+    - dispatchEvent dispatch event ke event target
+- Global Event Handler
+
+EVENT TARGET
+merupakan parent class dari node
+Di event target bisa nambahin 2 type yang sama dalam 1 node
+
+GLOBAL EVENT HANDLER
+merupakan kontrak untuk menambahkan event handler sesuai dengan tipenya
+Contohnya adalah misal onClick atau onFocus dan sebagainya
+
+Buat liat semua type dari event handler bisa liat di dokumentasinya aja
+
+Event
+==============================================
+DOM memiliki banyak sekali event
+Event sendiri akan disesuaikan dengan elementnya, misal video ada pause sama play, namun di button pasti agda
+Untuk lihat semua event ada di dokumentasinya, cari ae nanti kalo butuh ges
+
+Dalam callback funtion event bisa menerima data event yang memicu event itu terjadi
+Misal click data eventnya adalah berupa mouse event berisi lokasi mouse dan lain2x
+Detail dari semua event bisa diliat di dokumentasi, cari aja nanti ges
+
+Style
+==============================================
+Dengan menggunakan DOM juga bisa dilakukan untuk memanipulasi style
+Caranya adalah dengan element.style.name = value, Dengan ini maka style yang sebelumnya tidak akan tereplace
+Detailnya bisa diliat biasa di dokumentasi ges
+
+Saat menggunakan style di js ini maka namanya menjadi pascalCase sama kek di react lah ya
+
+
+

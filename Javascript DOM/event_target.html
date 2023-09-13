@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Target</title>
+</head>
+<body>
+<input id="clickMe" type="button" value="Click Me">
+
+<script>
+
+    const button = document.getElementById("clickMe");
+    button.addEventListener("click", () => {
+        const prev = button.getAttribute("value");
+        button.setAttribute("value", prev === "Click Me" ? "Clicked" : "Click Me");
+    });
+
+    button.addEventListener("click", () => {
+        console.log("Diclick");
+    });
+
+</script>
+</body>
+</html>

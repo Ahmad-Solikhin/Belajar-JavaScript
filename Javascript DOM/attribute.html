@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute</title>
+</head>
+<body>
+<img id="logo" src="https://www.programmerzamannow.com/img/pzn.png" alt="alternatif">
+
+<script>
+  const logo = document.getElementById("logo");
+
+  const src = logo.getAttributeNode("src");
+  console.log(src.name);
+  console.log(src.value);
+
+  console.log(logo.getAttribute("alt"));
+</script>
+</body>
+</html>
