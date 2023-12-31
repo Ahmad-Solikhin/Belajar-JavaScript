@@ -1,0 +1,24 @@
+====================================================
+Nope Package Manager
+====================================================
+
+Pengenalan
+====================================================
+NPM ini dugnakan untuk melakukan management project ModeJS
+dengan npm ini tidak hanya melakukan management project NodeJS saja
+Dengan mengggunakan NPM bisa digunakan untuk update, download, dan upgrade dependency secara otomatis
+NPM menyimpan sebua konfigurasinya pada file package.json
+
+Project Type
+====================================================
+Secara default project yang dibaut akan bertipe commonjs
+Jika ingin menggunakan JavaScript Modules, harus mengubah filenya menjadi file mjs
+Namun bisa juga diubah default projectnya dari commonjs menjadi modules di package.json
+Modules ini sangat direkomendasikan dibandingkan menggunakan commonjs, karena modules sduah menajadi standart di JS
+
+Export Module
+====================================================
+Jadi bisa melakukan expose lebih dari 1 file, dan nantinya bisa menggunakan nama aliasnya untuk file yang akan diexport
+Jadi tidak harus menggunakan nama asli file js nya
+
+
