@@ -1,0 +1,65 @@
+==============================================
+JEST
+==============================================
+
+Merupakan library untuk unit test di JS yang sangat populer saat ini
+Jest ini dibuat oleh facebook, jest terintegrasi dengan sangat baik dengan nodejs, react, vue, dll
+Jest ini hanya digunakan untuk melakukan unit test saja, jadi package nya hanya akan disimpan dalam mode dev saja
+
+NPX
+==============================================
+NPX ini adalah (Node Package Runner), ini digunakan spesial untuk menjalankan perintah yang bisa secara otomatis mendeteksi file yang terdapat di dalam node_modules/.bin/
+NPX ini juga sudah otomatis terinstall, nanti jika sebelumnya untuk menjalankan jest menggunakan ./.bin/node_modules/jest bisa dipermudah dengan npx jest
+
+
+Ketika sudah menambahkan jest bisa langsung menggunakan function test secara global, dan ini tidak perlu di import2x lagi
+Untuk penamaan file unit test jest harus menggunakan sufix "*.test.js"
+
+Babel
+==============================================
+Saat menjalankan Jest pertama kali pasti akan error, karena Jest itu blm support untuk module
+Hal ini bisa diatasi dengan cara menambahkan konfigurasi dari babel
+
+Babel ini bisa digunakan untuk membantu dalam penggunaan Jest
+Jadi nanti babel ini akan melakukan transformasi kode milik kita yang menggunakan modul menjadi commonjs
+Babel ini adalah JS compiler, karena JS ini memiliki banyak versi yang belum tentu compatible dengan pendahulunya
+Sebagai contoh jika membuat kode program dengan fitur Js terbaru seperti module nantinya dapat dicompile menjadi JS yantg compatible dengan JS lama
+
+Jest Configuration
+==============================================
+Jest mendukung 2 cara untuk menyimpan data konfigurasi
+Yang pertama adalah menambahklan key pada object jest di dalam package.json
+Cara kedua adalah menyimpan dalam file jest.config.js/ts/mjs atau dapat membuat filenya secara otomatis menggunakan jest --init
+Jika menggunakan file konfigurasi yang berbeda bisa dipindahkan semua konfigurasi jest nya ke dalam file baru nya dan jangan ada yang di package.json
+Konfigurasi apa saja yang bisa diuganakan dalam Jest bisa dicari pada konfigurasinya ges
+
+Matchers
+==============================================
+Untuk menyamakan hasil dan ekspetasi yang kita inginkan, hal ini disebut sebagai matchers
+Ada banyak sekali function untuk melakukan test di Matcher, bisa diliat di dokumentasinya kalo mau liat secara lengkap
+
+Jenis-jenis matcher adalah sebagai berikut :
+- equals: digunakan untuk menyamakan
+    - toBe: digunakan untuk value yang bukan object seperti string, number, dsb
+    - toEqual: digunakan untuk membandingkan object, jadi nanti akan dibandingkan semua atribute yang ada di dalam objectnya
+- truthiness: digunakan untuk membedakan antara undefined, null, dan false
+    - toBeNull: memastikan valuenya null
+    - toBeUndefined: memastikan value undefined
+    - toBeDefined: kebalikan dari toBeUndefined
+    - toBeTruthy: memastikan value berniali apapun, asal if menganggap true
+    - toBeFalsy: memastikan value berniali apapun, asal if menganggap false
+- numbers: digunakan untuk value berupa number, ini juga bisa menggunakan equals, namun ada tambahan
+    - toBeGreaterThan: lebih besar
+    - toBeGreaterThanOrEqual: lebih besar atau sama
+    - toBeLessThan: lebih kecil
+    - toBeLessThanOrEqual: lebih kecil atau saama
+- strings: digunakan untuk membandingkan string
+    - toMatch: ini membandingkan menggunakan regex
+- arrays: digunakan untuk mengecek value yang berjenis array, ini bisa menggunakan toEqual juga
+    - toContain: digunakan untuk memastikan value array memiliki item yang diberikan menggunakan toBe, ini ngecek yang isinya bukan object
+    - toContainEqual: digunakan untuk memastikan value array memiliki item yang diberikan menggunakan toEqual, ini ngecek yang isinya object
+- exceptions: ini mencocokan error yang terjadi
+    - toThrow: memastikan terjadi exception apapun
+    - toThrow(e): memastikan terjaid exception sesuai jenis yang ada di parameter
+    - toThros(m): memastikan terjadi exception dengan message sesuai yang ada di parameter
+- not: ini untuk melakukan negasi terhadap semua matchers nya
