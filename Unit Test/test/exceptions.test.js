@@ -5,3 +5,7 @@ test("exception", () => {
     expect(() => callMe("Gayuh")).toThrow(MyException);
     expect(() => callMe("Gayuh")).toThrow("Error ges");
 });
+
+test("No exception", () => {
+    expect(() => callMe("Ahmad")).not.toThrow();
+});

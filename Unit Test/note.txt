@@ -63,3 +63,61 @@ Jenis-jenis matcher adalah sebagai berikut :
     - toThrow(e): memastikan terjaid exception sesuai jenis yang ada di parameter
     - toThros(m): memastikan terjadi exception dengan message sesuai yang ada di parameter
 - not: ini untuk melakukan negasi terhadap semua matchers nya
+
+Test Async Code
+==============================================
+Jest bisa melakukan pengetesan pada kode asynchronous
+Namun jest perlu diberi tahu terlebih dahulu agar async nya ditunggu oleh jest
+
+Setup Function
+==============================================
+Ini adalah kode yang akan dijalankan sebelum atau sesudah unit test dijalankan
+Ada :
+- beforeEach: ini akan dijalankan sebelum function unit test dijalankan
+- afterEach: ini akan dieksekusi setelah function unit testnya dijalankan
+
+Ada juga function untuk menjalankan sebuah setup sebelum dan setelah 1 file unit test dijalankan
+Ada :
+- beforeAll
+- afterAll
+
+Scoping
+==============================================
+Scoping atau grouping ini digunakan untuk melakukan grouping unit test yang dibuat menggunakan function describe()
+Setup function yang ada dalam describenya hanya akan digunakan untuk menjalankan describe tersebut
+Jika tidak ditentukan describenya maka dia akan general digunakan terus
+
+Scoping ini bisa dilakukan secara nested
+
+Coverage
+==============================================
+Untuk menjalankan coverage menggunakan Jest bisa menggunakan fitur webstorm bisa langsung pilih coverage
+Namun untuk manualnya, bisa dibuat collectCoverage dari jest menjadi true di konfigurasinya
+
+Coverage ini juga bisa diatur thresholdnya, bisa diatur dalam file konfigurasi jest nya
+Attribute2xnya:
+- branches: ini adalah alur program seperti if else
+- functions: berapa banyak function yang digunakan
+- lines: berapa baris kode yang dilewati
+- statements: misal beberapa operator yang tercover oleh unit test nya
+
+Bisa menentukan juga kode mana saja yang harus di cover, jadi misal projectnya besar dan hanya mau cover beberapa file saja bisa menggunakan collectCoverageFrom
+
+It Function
+==============================================
+Di jest ada function test yang biasa digunakan, namun ini memiliki alias dengan menggunakan function it()
+
+Skip Function
+==============================================
+Jika mendapatkan masalah di suatu unit test dan ingin ignore unit test tersebut bisa membuat test tersebut menggunakan skip
+Jadi unit test tersebut nantinya akan di ignore
+
+Only Function
+==============================================
+Jika dalam satu file sudah banyak unit test nya dan hanya ingin fokus pada 1 unit test, hal ini bisa diatasi dengan menggunakan only
+Nantinya hanya unit test itu saja yang akan dieksekusi
+
+Each Function
+==============================================
+Kesalahan membuat unit test biasanya karena unit test yang dibuat duplicate dan hanya memiliki perbedaan dalam parameternya saja
+
