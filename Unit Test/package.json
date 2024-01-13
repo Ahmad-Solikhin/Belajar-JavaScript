@@ -23,7 +23,8 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!**/node_modules/**"
-    ]
+    ],
+    "maxConcurrency": 8
   },
   "author": "Gayuh",
   "license": "ISC",

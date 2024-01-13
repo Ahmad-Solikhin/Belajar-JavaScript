@@ -121,3 +121,48 @@ Each Function
 ==============================================
 Kesalahan membuat unit test biasanya karena unit test yang dibuat duplicate dan hanya memiliki perbedaan dalam parameternya saja
 
+Concurrent Test
+==============================================
+Misal ingin membuat unit test yang dibuat untuk dijalnkan secara concurrent dan tidak menunggu test lainnya untuk selesai
+Untuk menggunakannya bisa menambahkan concurrent setelah test atau it
+
+Bisa juga membatasi beberapa concurrent yang bisa berjalan secara bersamaan
+Hal ini bisa dilakukan dengan menambahkan di konfigurasi jest nya menggunakan attribute maxConcurrency
+Defaultnya untuk valuenya adalah 5
+
+Todo Function
+==============================================
+Todo function ini digunakan sebagai summary untuk menyiapkan unit test yang belum diimplementasikan
+
+Failing Function
+==============================================
+Kadang dalam unit test ada skenario yang gagal juga untuk kasusnya
+Misal mengirimkan data yang tidakvalid maka nanti akan diharapkan agar kodenya menjadi error
+Jadi hal ini bisa menggunakan failing
+Gagal disini adalah throw exception
+
+Mock
+==============================================
+Misal ingin membuat unit test yang membutuhkan interaksi seperti ke db, website, dan sebagainya
+Hal ini akan sulit untuk dilakukan
+Untuk itu bisa digunakan mocking ini untuk mengatasi hal tersebut
+
+Mock itu adalah object tiruan yang dibuat dengan memiliki tingkah laku seperti object aslinya
+Sehingga ini akan cocok ketika ingin melakukan unit test yang berhubungan dengan sistem lainnya
+
+Jenis Mock:
+- Mock FUnction : membuat tiruan dari sebuah function
+- Mock Class    : membuat tiruan dari classnya
+- Mock Module   : membuat tiruan dari modules
+
+Mock Function
+==============================================
+Untuk membuaat mock function bisa menggunakan jest.fn()
+
+saat membuat mock kadang ini tahu parameter apa yang digunakan
+Hal ini bisa diatasi dengan menggunakan mock properties
+
+Mock Async Function
+==============================================
+Selain mock function biasa, jest juga menyediakan yang async
+Hal ini nanti akan mengembalikan value berupa promise
