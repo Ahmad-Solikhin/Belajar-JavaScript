@@ -1,0 +1,75 @@
+LOGGING
+=============================================================
+Logging ini merupakan informasi yang berisikan waktu kejadian dan pesan kejadian
+Hal ini bisa juga digunakan sebagai debugging, jadi log ini sangat membantu untuk mengetahui informasi yang terjadi dalam aplikasi yang dibuat
+
+Library Logging
+=============================================================
+JS bawaan sendiri sudah bisa menggunakan log menggunakan console
+Namun karena fiturnya dirasa kurang, biasanya akan menggunakan library lain untuk melakukan logging
+Contoh library logging yang populer adalah "Winston"
+
+LOGGER
+=============================================================
+Object di dalam library winston untuk melakukan logging
+Berbeda dari log bawaan js, dalam menggunakan winston harus membuat object Logger nya terlebih dahulu
+Untuk membuatnya bisa mengggunakan function createLogger({})
+Dalam object di dalam function createLogger bisa ditambahkan options atau pengaturan
+
+TRANSPORT
+=============================================================
+Saat menjalankan logger secara langsung pasti akan menyebabkan error karena transport belum ditentukan
+Transport itu sendiri adalah destinasi atau target di mana logger akan dikirimkan
+Transport ada banyak sekali, console adalah salah satunya
+
+Logging Level
+=============================================================
+Ini untuk menandakan berapa tinggi atau penting informasi yang diberikan
+Level ini ada tingkatannya, seperti error merupakan level yang paling tinggi
+Level yang disediakan :
+    - error
+    - warn
+    - info
+    - http
+    - verbose
+    - debug
+    - silly
+
+Shortcut Function
+=============================================================
+Dengan menggunakan shortcut function ini tidak perlu lagi menggunakan function log dan menyebutkan levelnya
+Bisa langsung dengan logger.level
+
+Format
+=============================================================
+Format digunakan untuk melakukan formatting sebelum dikirimkan ke target yang diset
+Defaultnya dari winston adalah menggunakan JSON
+Banyak format lainnya yang didukung oleh winston
+
+Kita juga bisa membuat log cutom milik kita sendiri menggunakan printf
+
+Combined Format
+=============================================================
+Winston mendukung kombinasi beberapa format
+Namun harus hati2x agar hasilnya tidak berantakan dan malah susah untuk dibaca
+
+File Transport
+=============================================================
+Jika ingin menambahkan target dari logger tidak hanya ke console bisa juga ditambahkan transportnya tanpa membuat logger baru
+Karena parameter dari transportnya adalah array
+
+Transport Level
+=============================================================
+Transport juga memiliki pengaturan level sendiri-sendiri
+Jadi bisa dibuat misal kalau info ke atas akan ditampilkan semua di console, namun jika warn ke atas simpan juga ke file
+
+Rotate File
+=============================================================
+Agar winston bisa melakukan rotate file secara otomatis sesuai dengan pengaturan yang ditentukan
+Jadi dengan rotate file ini bisa menghapus file lama ketika sudah tidak diperlukan lagi
+
+Membuat Transport
+=============================================================
+Pada kasus tertentu ingin membuat transport sendiri, misal kalau error dikirim ke email atau database
+Untuk membuat transportnya bisa membuat class turunan dari winston-transport
+

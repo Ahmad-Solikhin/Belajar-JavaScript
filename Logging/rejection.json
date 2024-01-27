@@ -1,0 +1,35 @@
+{
+  "date": "Sat Jan 27 2024 14:25:47 GMT+0700 (Western Indonesia Time)",
+  "error": "Ups",
+  "exception": true,
+  "level": "error",
+  "message": "unhandledRejection: Ups\n  No stack trace",
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 273011.531
+  },
+  "process": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Pribadi\\Belajar JavaScript\\Logging\\src\\logging-rejection.js"
+    ],
+    "cwd": "D:\\Pribadi\\Belajar JavaScript\\Logging\\src",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "gid": null,
+    "memoryUsage": {
+      "arrayBuffers": 143211,
+      "external": 714515,
+      "heapTotal": 11952128,
+      "heapUsed": 9068992,
+      "rss": 44539904
+    },
+    "pid": 27528,
+    "uid": null,
+    "version": "v18.16.1"
+  },
+  "trace": []
+}

@@ -1,0 +1,53 @@
+{
+  "date": "Sat Jan 27 2024 14:21:25 GMT+0700 (Western Indonesia Time)",
+  "error": {},
+  "exception": true,
+  "level": "error",
+  "message": "uncaughtException: hello is not defined\nReferenceError: hello is not defined\n    at file:///D:/Pribadi/Belajar%20JavaScript/Logging/src/logging-exception.js:14:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)",
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 272749.578
+  },
+  "process": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Pribadi\\Belajar JavaScript\\Logging\\src\\logging-exception.js"
+    ],
+    "cwd": "D:\\Pribadi\\Belajar JavaScript\\Logging\\src",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "gid": null,
+    "memoryUsage": {
+      "arrayBuffers": 143211,
+      "external": 714515,
+      "heapTotal": 11952128,
+      "heapUsed": 9118168,
+      "rss": 44457984
+    },
+    "pid": 26308,
+    "uid": null,
+    "version": "v18.16.1"
+  },
+  "stack": "ReferenceError: hello is not defined\n    at file:///D:/Pribadi/Belajar%20JavaScript/Logging/src/logging-exception.js:14:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)",
+  "trace": [
+    {
+      "column": 1,
+      "file": "file:///D:/Pribadi/Belajar%20JavaScript/Logging/src/logging-exception.js",
+      "function": null,
+      "line": 14,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 194,
+      "method": "run",
+      "native": false
+    }
+  ]
+}

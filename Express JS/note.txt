@@ -1,0 +1,10 @@
+ExpressJS
+=================================================================
+Ini adalah salah satu framework yang paling populer saat menggunakan nodejs
+Framework ini sayang sederhana dan sangat ringan, expressjs ini juga merupakan framework yang opensource
+Karena expressjs ini sangat minimalis, maka biasanya expressjs ini akan diintegrasikan dengan banyak library nodejs lainnya
+Sehingga hal ini membuat express sangat modular, bisa hanya menginstall library yang diinginkan saja tanpa membuat ukuran project membengkak
+
+Application
+=================================================================
+Saat membuat web menggunakan express pasti akan dibuat object Application
