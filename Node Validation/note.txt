@@ -1,0 +1,15 @@
+Validasi
+==========================================================
+Ini digunakan untuk menjaga agar data yang masuk itu sudah benar dan sesuai dengan aturan yang kita tentukan sebelumnya
+Validasi ini bertindak sebagai filter sebelum data nya dimasukkan ke database atau tempat penyimpanan lainnya
+
+Nodejs tidak memiliki package bawaan untuk melakukan validasi
+Namun bisa menggunakan package third party yang populer saat ini adalah Joi
+
+Joi mendukung banyak tipe data di javascript
+Untuk menggunakannnya harus membuat schema terlebih dahulu
+Schema ini akan digunakan sebagai aturan saaat melakukan validasi nantinya
+
+Date Validation
+=========================================================
+Untuk memvalidasi tipe data date di nodejs juga disediakan oleh joi
