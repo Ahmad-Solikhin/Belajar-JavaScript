@@ -13,3 +13,41 @@ Schema ini akan digunakan sebagai aturan saaat melakukan validasi nantinya
 Date Validation
 =========================================================
 Untuk memvalidasi tipe data date di nodejs juga disediakan oleh joi
+
+
+Validation Result
+=========================================================
+Saat melakukan validasi menggunakan method validate(), hasil methodnya akan memiliki attribute value dan error
+Hasil data akan ada di value dan misal terjadi error maka isi dari error nya akan ada ValidationError
+
+Validation Option
+=========================================================
+Ini merupakan pengaturan tambahan bagaimana untuk melakukan validasi
+Buat lebih lengkapnya bisa cek di dokumentasinya gan
+
+Object Validation
+=========================================================
+Joi juga bisa digunakan untuk memvalidasi javascript object, jadi kalo ada nested object atau array bisa dilakukan validasi juga di dalamnya
+Untuk membuat schema validasinya bisa dengan membuat Joi.object(), nanti isinya adalah pair antara key dan schema validasinya
+
+Jika ingin melakukan validasi nested object, harus dibuat juga schema untuk validasi object tersebut
+
+Array Validation
+=========================================================
+Joi mendukung melakukan validasi dari array
+jadi bisa melakukan validasi array yang berisi tipe data sederhana maupun object yang cukup rumit
+Buat detail bisa liat dokumendasi cuyy
+
+Untuk melakukan validasi array of object bisa dikombinasikan dengan schema array dan schema object nya
+
+Custom Message Validation
+=========================================================
+Di Joi kita bisa melakukan custom untuk message errornya
+Kalau tidak di set custom message nya maka akan menggunakan default message dari joi
+Untuk mengubahnya bisa menggunakan method messages(message), dan nantinya akan menggunakan message custom ini
+
+Custom Validation
+=========================================================
+Jika ingin menggunakan validasi yang ternyata tidak disediakan oleh Joi maka kita bisa membuat sendiri custom validationnya
+Untuk membuatnya bisa menggunakan method custom()
+Buat lengkapnya bisa cek di dokumentasinya kek biasa ges

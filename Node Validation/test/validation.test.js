@@ -21,6 +21,8 @@ describe("Joi", () => {
         const resultUsername = usernameSchema.validate("ahmadsgr39@gmail.com");
         console.info(resultUsername);
 
+        console.info(typeof resultUsername.value);
+
         const resultAdmin = adminSchema.validate(true);
         console.info(resultAdmin);
 
